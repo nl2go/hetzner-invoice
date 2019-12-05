@@ -7,3 +7,6 @@ Automatically download and transform Hetzner invoices.
 
 To install the dependencies, run 
 `pip install poetry` and then `poetry install`.
+
+### Contributing
+To install the [pre-commit hook](https://pre-commit.com), run `pip install pre-commit` and then `pre-commit install`.
