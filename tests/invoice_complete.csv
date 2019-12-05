@@ -1,0 +1,24 @@
+type,description,start_date,end_date,quantity,unit_price,price,role,id,environment,cores,memory,disk,price_monthly
+32 GB DDR4 Reg. ECC RAM,Server #334455,2020-05-07,2020-05-28,40.000.000.000,220.000.000.000,88.00,None,"334455",None,None,None,None,None
+4 TB SATA 6 Gb/s Enterprise Hard Drive,Server #556677,2020-05-28,2020-05-28,20.000.000.000,130.000.000.000,26.00,None,"556677",None,None,None,None,None
+4-Port Hardware RAID-Controller,Server #889911,2020-05-28,2020-05-28,10.000.000.000,126.050.000.000,12.61,None,"889911",None,None,None,None,None
+500 GB Backup-Speicherplatz,Server #223344,2020-05-28,2020-05-28,10.000.000.000,49.000.000.000,4.90,None,"223344",None,None,None,None,None
+Backup,"Server #445566 ""paas-node-42-prod-cx51-hetzner-137""
+Preis: 20% des Instanzpreises
+20% von 5,1000 €
+",2020-05-28,2020-05-28,10.000.000.000,10.200.000.000,01.02,None,"445566",prod,None,None,None,None
+BX10,#667788,2020-05-28,2020-05-28,10.000.000.000,29.000.000.000,2.90,None,"667788",None,None,None,None,None
+EX41,"#991122, 30 TB, 127.0.0.1",2020-05-28,2020-05-28,10.000.000.000,390.000.000.000,39.00,None,"991122",None,None,None,None,None
+EX41-SSD,"#223344, 30 TB, 127.0.0.1",2020-05-28,2020-05-28,10.000.000.000,390.000.000.000,39.00,None,"223344",None,None,None,None,None
+PX120,"#445566, 50 TB, 127.0.0.1",2020-05-28,2020-05-28,10.000.000.000,1.084.034.000.000,108.40,None,"445566",None,None,None,None,None
+Server cx11,"#667788 ""db-main-slave-dev-cx11ssd""
+Preis: 0,0040 €/h, max. 2,4900 €/Monat
+Nutzung: 744 h
+Maximalpreis für diesen Zeitraum: 2,4900 €
+",2020-05-07,2020-05-28,10.000.000.000,24.900.000.000,2.49,db,"667788",dev,1,2.0,20,2.9631000000000000
+Server cx21,"#889900 ""paas-node-29-prod-vm-hetzner-121""
+Preis: 0,0080 €/h, max. 4,9000 €/Monat
+Nutzung: 31 h
+Maximalpreis für diesen Zeitraum: 4,9000 €
+",2020-05-28,2020-05-28,310.000.000.000,80.000.000,0.25,None,"889900",prod,2,4.0,40,5.8310000000000000
+zusätzliche IP,"127.0.0.1, Server #113344",2020-05-07,2020-05-28,10.000.000.000,8.403.000.000,0.84,None,"113344",None,None,None,None,None

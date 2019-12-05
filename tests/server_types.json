@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "pagination": {
+      "last_page": 1,
+      "next_page": "None",
+      "page": 1,
+      "per_page": 2,
+      "previous_page": "None",
+      "total_entries": 2
+    }
+  },
+  "server_types": [
+    {
+      "cores": 1,
+      "cpu_type": "shared",
+      "deprecated": "None",
+      "description": "CX11",
+      "disk": 20,
+      "id": 1,
+      "memory": 2.0,
+      "name": "cx11",
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_hourly": {
+            "gross": "0.0047600000000000",
+            "net": "0.0040000000"
+          },
+          "price_monthly": {
+            "gross": "2.9631000000000000",
+            "net": "2.4900000000"
+          }
+        },
+        {
+          "location": "hel1",
+          "price_hourly": {
+            "gross": "0.0047600000000000",
+            "net": "0.0040000000"
+          },
+          "price_monthly": {
+            "gross": "2.9631000000000000",
+            "net": "2.4900000000"
+          }
+        },
+        {
+          "location": "nbg1",
+          "price_hourly": {
+            "gross": "0.0047600000000000",
+            "net": "0.0040000000"
+          },
+          "price_monthly": {
+            "gross": "2.9631000000000000",
+            "net": "2.4900000000"
+          }
+        }
+      ],
+      "storage_type": "local"
+    },
+    {
+      "cores": 2,
+      "cpu_type": "shared",
+      "deprecated": "None",
+      "description": "CX21",
+      "disk": 40,
+      "id": 2,
+      "memory": 4.0,
+      "name": "cx21",
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_hourly": {
+            "gross": "0.0095200000000000",
+            "net": "0.0080000000"
+          },
+          "price_monthly": {
+            "gross": "5.8310000000000000",
+            "net": "4.9000000000"
+          }
+        },
+        {
+          "location": "nbg1",
+          "price_hourly": {
+            "gross": "0.0095200000000000",
+            "net": "0.0080000000"
+          },
+          "price_monthly": {
+            "gross": "5.8310000000000000",
+            "net": "4.9000000000"
+          }
+        }
+      ]
+    }
+  ]
+}

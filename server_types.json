@@ -1,0 +1,704 @@
+{
+  "meta": {
+    "pagination": {
+      "last_page": 1,
+      "next_page": "None",
+      "page": 1,
+      "per_page": 25,
+      "previous_page": "None",
+      "total_entries": 15
+    }
+  },
+  "server_types": [
+    {
+      "cores": 1,
+      "cpu_type": "shared",
+      "deprecated": "None",
+      "description": "CX11",
+      "disk": 20,
+      "id": 1,
+      "memory": 2.0,
+      "name": "cx11",
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_hourly": {
+            "gross": "0.0047600000000000",
+            "net": "0.0040000000"
+          },
+          "price_monthly": {
+            "gross": "2.9631000000000000",
+            "net": "2.4900000000"
+          }
+        },
+        {
+          "location": "hel1",
+          "price_hourly": {
+            "gross": "0.0047600000000000",
+            "net": "0.0040000000"
+          },
+          "price_monthly": {
+            "gross": "2.9631000000000000",
+            "net": "2.4900000000"
+          }
+        },
+        {
+          "location": "nbg1",
+          "price_hourly": {
+            "gross": "0.0047600000000000",
+            "net": "0.0040000000"
+          },
+          "price_monthly": {
+            "gross": "2.9631000000000000",
+            "net": "2.4900000000"
+          }
+        }
+      ],
+      "storage_type": "local"
+    },
+    {
+      "cores": 1,
+      "cpu_type": "shared",
+      "deprecated": "None",
+      "description": "CX11 Ceph Disk",
+      "disk": 20,
+      "id": 2,
+      "memory": 2.0,
+      "name": "cx11-ceph",
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_hourly": {
+            "gross": "0.0047600000000000",
+            "net": "0.0040000000"
+          },
+          "price_monthly": {
+            "gross": "2.9631000000000000",
+            "net": "2.4900000000"
+          }
+        },
+        {
+          "location": "nbg1",
+          "price_hourly": {
+            "gross": "0.0047600000000000",
+            "net": "0.0040000000"
+          },
+          "price_monthly": {
+            "gross": "2.9631000000000000",
+            "net": "2.4900000000"
+          }
+        },
+        {
+          "location": "hel1",
+          "price_hourly": {
+            "gross": "0.0047600000000000",
+            "net": "0.0040000000"
+          },
+          "price_monthly": {
+            "gross": "2.9631000000000000",
+            "net": "2.4900000000"
+          }
+        }
+      ],
+      "storage_type": "network"
+    },
+    {
+      "cores": 2,
+      "cpu_type": "shared",
+      "deprecated": "None",
+      "description": "CX21",
+      "disk": 40,
+      "id": 3,
+      "memory": 4.0,
+      "name": "cx21",
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_hourly": {
+            "gross": "0.0095200000000000",
+            "net": "0.0080000000"
+          },
+          "price_monthly": {
+            "gross": "5.8310000000000000",
+            "net": "4.9000000000"
+          }
+        },
+        {
+          "location": "nbg1",
+          "price_hourly": {
+            "gross": "0.0095200000000000",
+            "net": "0.0080000000"
+          },
+          "price_monthly": {
+            "gross": "5.8310000000000000",
+            "net": "4.9000000000"
+          }
+        },
+        {
+          "location": "hel1",
+          "price_hourly": {
+            "gross": "0.0095200000000000",
+            "net": "0.0080000000"
+          },
+          "price_monthly": {
+            "gross": "5.8310000000000000",
+            "net": "4.9000000000"
+          }
+        }
+      ],
+      "storage_type": "local"
+    },
+    {
+      "cores": 2,
+      "cpu_type": "shared",
+      "deprecated": "None",
+      "description": "CX21 Ceph Disk",
+      "disk": 40,
+      "id": 4,
+      "memory": 4.0,
+      "name": "cx21-ceph",
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_hourly": {
+            "gross": "0.0095200000000000",
+            "net": "0.0080000000"
+          },
+          "price_monthly": {
+            "gross": "5.8310000000000000",
+            "net": "4.9000000000"
+          }
+        },
+        {
+          "location": "nbg1",
+          "price_hourly": {
+            "gross": "0.0095200000000000",
+            "net": "0.0080000000"
+          },
+          "price_monthly": {
+            "gross": "5.8310000000000000",
+            "net": "4.9000000000"
+          }
+        },
+        {
+          "location": "hel1",
+          "price_hourly": {
+            "gross": "0.0095200000000000",
+            "net": "0.0080000000"
+          },
+          "price_monthly": {
+            "gross": "5.8310000000000000",
+            "net": "4.9000000000"
+          }
+        }
+      ],
+      "storage_type": "network"
+    },
+    {
+      "cores": 2,
+      "cpu_type": "shared",
+      "deprecated": "None",
+      "description": "CX31",
+      "disk": 80,
+      "id": 5,
+      "memory": 8.0,
+      "name": "cx31",
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_hourly": {
+            "gross": "0.0166600000000000",
+            "net": "0.0140000000"
+          },
+          "price_monthly": {
+            "gross": "10.5910000000000000",
+            "net": "8.9000000000"
+          }
+        },
+        {
+          "location": "nbg1",
+          "price_hourly": {
+            "gross": "0.0166600000000000",
+            "net": "0.0140000000"
+          },
+          "price_monthly": {
+            "gross": "10.5910000000000000",
+            "net": "8.9000000000"
+          }
+        },
+        {
+          "location": "hel1",
+          "price_hourly": {
+            "gross": "0.0166600000000000",
+            "net": "0.0140000000"
+          },
+          "price_monthly": {
+            "gross": "10.5910000000000000",
+            "net": "8.9000000000"
+          }
+        }
+      ],
+      "storage_type": "local"
+    },
+    {
+      "cores": 2,
+      "cpu_type": "shared",
+      "deprecated": "None",
+      "description": "CX31 Ceph Disk",
+      "disk": 80,
+      "id": 6,
+      "memory": 8.0,
+      "name": "cx31-ceph",
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_hourly": {
+            "gross": "0.0166600000000000",
+            "net": "0.0140000000"
+          },
+          "price_monthly": {
+            "gross": "10.5910000000000000",
+            "net": "8.9000000000"
+          }
+        },
+        {
+          "location": "nbg1",
+          "price_hourly": {
+            "gross": "0.0166600000000000",
+            "net": "0.0140000000"
+          },
+          "price_monthly": {
+            "gross": "10.5910000000000000",
+            "net": "8.9000000000"
+          }
+        },
+        {
+          "location": "hel1",
+          "price_hourly": {
+            "gross": "0.0166600000000000",
+            "net": "0.0140000000"
+          },
+          "price_monthly": {
+            "gross": "10.5910000000000000",
+            "net": "8.9000000000"
+          }
+        }
+      ],
+      "storage_type": "network"
+    },
+    {
+      "cores": 4,
+      "cpu_type": "shared",
+      "deprecated": "None",
+      "description": "CX41",
+      "disk": 160,
+      "id": 7,
+      "memory": 16.0,
+      "name": "cx41",
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_hourly": {
+            "gross": "0.0309400000000000",
+            "net": "0.0260000000"
+          },
+          "price_monthly": {
+            "gross": "18.9210000000000000",
+            "net": "15.9000000000"
+          }
+        },
+        {
+          "location": "nbg1",
+          "price_hourly": {
+            "gross": "0.0309400000000000",
+            "net": "0.0260000000"
+          },
+          "price_monthly": {
+            "gross": "18.9210000000000000",
+            "net": "15.9000000000"
+          }
+        },
+        {
+          "location": "hel1",
+          "price_hourly": {
+            "gross": "0.0309400000000000",
+            "net": "0.0260000000"
+          },
+          "price_monthly": {
+            "gross": "18.9210000000000000",
+            "net": "15.9000000000"
+          }
+        }
+      ],
+      "storage_type": "local"
+    },
+    {
+      "cores": 4,
+      "cpu_type": "shared",
+      "deprecated": "None",
+      "description": "CX41 Ceph Disk",
+      "disk": 160,
+      "id": 8,
+      "memory": 16.0,
+      "name": "cx41-ceph",
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_hourly": {
+            "gross": "0.0309400000000000",
+            "net": "0.0260000000"
+          },
+          "price_monthly": {
+            "gross": "18.9210000000000000",
+            "net": "15.9000000000"
+          }
+        },
+        {
+          "location": "nbg1",
+          "price_hourly": {
+            "gross": "0.0309400000000000",
+            "net": "0.0260000000"
+          },
+          "price_monthly": {
+            "gross": "18.9210000000000000",
+            "net": "15.9000000000"
+          }
+        },
+        {
+          "location": "hel1",
+          "price_hourly": {
+            "gross": "0.0309400000000000",
+            "net": "0.0260000000"
+          },
+          "price_monthly": {
+            "gross": "18.9210000000000000",
+            "net": "15.9000000000"
+          }
+        }
+      ],
+      "storage_type": "network"
+    },
+    {
+      "cores": 8,
+      "cpu_type": "shared",
+      "deprecated": "None",
+      "description": "CX51",
+      "disk": 240,
+      "id": 9,
+      "memory": 32.0,
+      "name": "cx51",
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_hourly": {
+            "gross": "0.0595000000000000",
+            "net": "0.0500000000"
+          },
+          "price_monthly": {
+            "gross": "35.5810000000000000",
+            "net": "29.9000000000"
+          }
+        },
+        {
+          "location": "nbg1",
+          "price_hourly": {
+            "gross": "0.0595000000000000",
+            "net": "0.0500000000"
+          },
+          "price_monthly": {
+            "gross": "35.5810000000000000",
+            "net": "29.9000000000"
+          }
+        },
+        {
+          "location": "hel1",
+          "price_hourly": {
+            "gross": "0.0595000000000000",
+            "net": "0.0500000000"
+          },
+          "price_monthly": {
+            "gross": "35.5810000000000000",
+            "net": "29.9000000000"
+          }
+        }
+      ],
+      "storage_type": "local"
+    },
+    {
+      "cores": 8,
+      "cpu_type": "shared",
+      "deprecated": "None",
+      "description": "CX51 Ceph Disk",
+      "disk": 240,
+      "id": 10,
+      "memory": 32.0,
+      "name": "cx51-ceph",
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_hourly": {
+            "gross": "0.0595000000000000",
+            "net": "0.0500000000"
+          },
+          "price_monthly": {
+            "gross": "35.5810000000000000",
+            "net": "29.9000000000"
+          }
+        },
+        {
+          "location": "nbg1",
+          "price_hourly": {
+            "gross": "0.0595000000000000",
+            "net": "0.0500000000"
+          },
+          "price_monthly": {
+            "gross": "35.5810000000000000",
+            "net": "29.9000000000"
+          }
+        },
+        {
+          "location": "hel1",
+          "price_hourly": {
+            "gross": "0.0595000000000000",
+            "net": "0.0500000000"
+          },
+          "price_monthly": {
+            "gross": "35.5810000000000000",
+            "net": "29.9000000000"
+          }
+        }
+      ],
+      "storage_type": "network"
+    },
+    {
+      "cores": 2,
+      "cpu_type": "dedicated",
+      "deprecated": "None",
+      "description": "CCX11 Dedicated CPU",
+      "disk": 80,
+      "id": 11,
+      "memory": 8.0,
+      "name": "ccx11",
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_hourly": {
+            "gross": "0.0357000000000000",
+            "net": "0.0300000000"
+          },
+          "price_monthly": {
+            "gross": "23.6810000000000000",
+            "net": "19.9000000000"
+          }
+        },
+        {
+          "location": "nbg1",
+          "price_hourly": {
+            "gross": "0.0357000000000000",
+            "net": "0.0300000000"
+          },
+          "price_monthly": {
+            "gross": "23.6810000000000000",
+            "net": "19.9000000000"
+          }
+        },
+        {
+          "location": "hel1",
+          "price_hourly": {
+            "gross": "0.0357000000000000",
+            "net": "0.0300000000"
+          },
+          "price_monthly": {
+            "gross": "23.6810000000000000",
+            "net": "19.9000000000"
+          }
+        }
+      ],
+      "storage_type": "local"
+    },
+    {
+      "cores": 4,
+      "cpu_type": "dedicated",
+      "deprecated": "None",
+      "description": "CCX21 Dedicated CPU",
+      "disk": 160,
+      "id": 12,
+      "memory": 16.0,
+      "name": "ccx21",
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_hourly": {
+            "gross": "0.0714000000000000",
+            "net": "0.0600000000"
+          },
+          "price_monthly": {
+            "gross": "41.5310000000000000",
+            "net": "34.9000000000"
+          }
+        },
+        {
+          "location": "nbg1",
+          "price_hourly": {
+            "gross": "0.0714000000000000",
+            "net": "0.0600000000"
+          },
+          "price_monthly": {
+            "gross": "41.5310000000000000",
+            "net": "34.9000000000"
+          }
+        },
+        {
+          "location": "hel1",
+          "price_hourly": {
+            "gross": "0.0714000000000000",
+            "net": "0.0600000000"
+          },
+          "price_monthly": {
+            "gross": "41.5310000000000000",
+            "net": "34.9000000000"
+          }
+        }
+      ],
+      "storage_type": "local"
+    },
+    {
+      "cores": 8,
+      "cpu_type": "dedicated",
+      "deprecated": "None",
+      "description": "CCX31 Dedicated CPU",
+      "disk": 240,
+      "id": 13,
+      "memory": 32.0,
+      "name": "ccx31",
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_hourly": {
+            "gross": "0.1428000000000000",
+            "net": "0.1200000000"
+          },
+          "price_monthly": {
+            "gross": "83.1810000000000000",
+            "net": "69.9000000000"
+          }
+        },
+        {
+          "location": "nbg1",
+          "price_hourly": {
+            "gross": "0.1428000000000000",
+            "net": "0.1200000000"
+          },
+          "price_monthly": {
+            "gross": "83.1810000000000000",
+            "net": "69.9000000000"
+          }
+        },
+        {
+          "location": "hel1",
+          "price_hourly": {
+            "gross": "0.1428000000000000",
+            "net": "0.1200000000"
+          },
+          "price_monthly": {
+            "gross": "83.1810000000000000",
+            "net": "69.9000000000"
+          }
+        }
+      ],
+      "storage_type": "local"
+    },
+    {
+      "cores": 16,
+      "cpu_type": "dedicated",
+      "deprecated": "None",
+      "description": "CCX41 Dedicated CPU",
+      "disk": 360,
+      "id": 14,
+      "memory": 64.0,
+      "name": "ccx41",
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_hourly": {
+            "gross": "0.2856000000000000",
+            "net": "0.2400000000"
+          },
+          "price_monthly": {
+            "gross": "166.4810000000000000",
+            "net": "139.9000000000"
+          }
+        },
+        {
+          "location": "nbg1",
+          "price_hourly": {
+            "gross": "0.2856000000000000",
+            "net": "0.2400000000"
+          },
+          "price_monthly": {
+            "gross": "166.4810000000000000",
+            "net": "139.9000000000"
+          }
+        },
+        {
+          "location": "hel1",
+          "price_hourly": {
+            "gross": "0.2856000000000000",
+            "net": "0.2400000000"
+          },
+          "price_monthly": {
+            "gross": "166.4810000000000000",
+            "net": "139.9000000000"
+          }
+        }
+      ],
+      "storage_type": "local"
+    },
+    {
+      "cores": 32,
+      "cpu_type": "dedicated",
+      "deprecated": "None",
+      "description": "CCX51 Dedicated CPU",
+      "disk": 600,
+      "id": 15,
+      "memory": 128.0,
+      "name": "ccx51",
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_hourly": {
+            "gross": "0.5712000000000000",
+            "net": "0.4800000000"
+          },
+          "price_monthly": {
+            "gross": "321.1810000000000000",
+            "net": "269.9000000000"
+          }
+        },
+        {
+          "location": "nbg1",
+          "price_hourly": {
+            "gross": "0.5712000000000000",
+            "net": "0.4800000000"
+          },
+          "price_monthly": {
+            "gross": "321.1810000000000000",
+            "net": "269.9000000000"
+          }
+        },
+        {
+          "location": "hel1",
+          "price_hourly": {
+            "gross": "0.5712000000000000",
+            "net": "0.4800000000"
+          },
+          "price_monthly": {
+            "gross": "321.1810000000000000",
+            "net": "269.9000000000"
+          }
+        }
+      ],
+      "storage_type": "local"
+    }
+  ]
+}
