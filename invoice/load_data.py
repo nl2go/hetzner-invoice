@@ -3,6 +3,8 @@ from typing import List
 
 import pandas as pd
 
+from .values import COLNAMES
+
 
 def read_invoice_file(filepath: str) -> pd.DataFrame:
     """
@@ -12,15 +14,7 @@ def read_invoice_file(filepath: str) -> pd.DataFrame:
     """
     invoice_df = pd.read_csv(
         filepath,
-        names=[
-            "type",
-            "description",
-            "start_date",
-            "end_date",
-            "quantity",
-            "unit_price",
-            "price",
-        ],
+        names=COLNAMES,
         index_col=False,
     )
     return invoice_df

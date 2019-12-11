@@ -1,14 +1,12 @@
 import re
-from typing import List, Optional
+from typing import List, Optional, Iterable
 
 import pandas as pd
 from cafeteria.patterns import dict
 
-ROLE_OPTIONS = ["db-", "app-", "mta-", "api-"]
-ENVIRONMENT_OPTIONS = ["-prod-", "-dev-", "-staging-", "-test-"]
+from .values import ROLE_OPTIONS, ENVIRONMENT_OPTIONS
 
-
-def get_matching_option(options: List, data: str) -> Optional[str]:
+def get_matching_option(options: Iterable, data: str) -> Optional[str]:
     """
     Extracts the environment or role matching one of those defined in a list.
     :param options: List of available environments or roles.

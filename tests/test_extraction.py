@@ -5,16 +5,7 @@ import pytest
 
 from invoice.invoice import populate_columns
 from invoice.load_data import read_invoice_file, read_server_info_file
-
-COLNAMES = [
-    "type",
-    "description",
-    "start_date",
-    "end_date",
-    "quantity",
-    "unit_price",
-    "price",
-]
+from invoice.values import COLNAMES
 
 
 @pytest.fixture
