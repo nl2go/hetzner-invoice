@@ -82,16 +82,13 @@ def populate_columns(invoice_df: pd.DataFrame, server_types_data: List) -> pd.Da
 
     server_type = [get_server_type(x) for x in invoice_df["type"]]
 
-    # FIXME: mypy complains because get_server_information could return not only str but also
-    # None, and below (line 91) str(None) could translate into something we don't want.
     for key in ["cores", "memory", "disk", "prices"]:
         invoice_df[key] = [
-            str(get_server_information(x, server_types_data, key)) for x in server_type
+            str(get_server_information(x, server_types_data, key)) if x else None for x in server_type
         ]
     invoice_df = (
         invoice_df.assign(role=role, id=server, environment=environment)
         .rename(columns={"prices": "price_monthly"})
-        .replace({"None": None})
     )
 
     return invoice_df
