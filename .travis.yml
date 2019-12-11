@@ -9,5 +9,6 @@ install:
 
 script:
   - python -m pytest --cov=invoice tests/
+  - python -m mypy invoice/
   - black --check  invoice/ tests/
   - flake8 cmdbox
