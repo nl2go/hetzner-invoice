@@ -6,6 +6,7 @@ from cafeteria.patterns import dict
 
 from .values import ROLE_OPTIONS, ENVIRONMENT_OPTIONS
 
+
 def get_matching_option(options: Iterable, data: str) -> Optional[str]:
     """
     Extracts the environment or role matching one of those defined in a list.
@@ -84,11 +85,11 @@ def populate_columns(invoice_df: pd.DataFrame, server_types_data: List) -> pd.Da
 
     for key in ["cores", "memory", "disk", "prices"]:
         invoice_df[key] = [
-            str(get_server_information(x, server_types_data, key)) if x else None for x in server_type
+            str(get_server_information(x, server_types_data, key)) if x else None
+            for x in server_type
         ]
-    invoice_df = (
-        invoice_df.assign(role=role, id=server, environment=environment)
-        .rename(columns={"prices": "price_monthly"})
-    )
+    invoice_df = invoice_df.assign(
+        role=role, id=server, environment=environment
+    ).rename(columns={"prices": "price_monthly"})
 
     return invoice_df

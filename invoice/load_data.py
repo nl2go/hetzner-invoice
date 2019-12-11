@@ -12,11 +12,7 @@ def read_invoice_file(filepath: str) -> pd.DataFrame:
     :param filepath: File path of the invoice.
     :return: DataFrame with named columns.
     """
-    invoice_df = pd.read_csv(
-        filepath,
-        names=COLNAMES,
-        index_col=False,
-    )
+    invoice_df = pd.read_csv(filepath, names=COLNAMES, index_col=False)
     return invoice_df
 
 

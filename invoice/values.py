@@ -8,5 +8,5 @@ COLNAMES = (
     "price",
 )  # type: tuple
 
-ROLE_OPTIONS = ("db-", "app-", "mta-", "api-") # type: tuple
-ENVIRONMENT_OPTIONS = ("-prod-", "-dev-", "-staging-", "-test-") # type: tuple
+ROLE_OPTIONS = ("db-", "app-", "mta-", "api-")  # type: tuple
+ENVIRONMENT_OPTIONS = ("-prod-", "-dev-", "-staging-", "-test-")  # type: tuple
