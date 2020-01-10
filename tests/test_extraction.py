@@ -3,7 +3,7 @@ import json
 import pandas as pd
 import pytest
 
-from invoice.invoice import populate_columns
+from invoice.process_invoice import populate_columns
 from invoice.load_data import read_invoice_file, read_server_info_file
 
 COLNAMES = [
