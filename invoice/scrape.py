@@ -26,7 +26,6 @@ def get_invoice_from_hetzner_account(
     invoice_number = (
         soup.find("span", attrs={"class": "invoice-number"}).getText().split("\n")[0]
     )
-    print(invoice_number)
 
     url = INVOICE_DOWNLOAD_URL.format(invoice_number=invoice_number)
     file = s.get(url)

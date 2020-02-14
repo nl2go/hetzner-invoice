@@ -1,0 +1,15 @@
+.pytest_cache
+tests
+venv
+.coverage
+.flake8
+.gitignore
+.pre-commit-config.yaml
+.travis.yml
+docker-compose.yml
+Dockerfile
+LICENSE
+README.md
+.git
+.idea
+__pycache__

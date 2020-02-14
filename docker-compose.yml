@@ -1,0 +1,36 @@
+version: '2.0'
+
+services:
+  app:
+    container_name: hetzner-invoice-app
+    image: nl2go/hetzner-invoice:dev
+    build:
+      context: .
+    depends_on:
+      - db
+    environment:
+      HETZNER_INVOICE_ACCOUNT_USER:
+      HETZNER_INVOICE_ACCOUNT_PW:
+      HETZNER_INVOICE_ACCOUNT_SECRET:
+      HETZNER_INVOICE_FILE:
+      HETZNER_INVOICE_DB_USER:
+      HETZNER_INVOICE_DB_PW:
+      HETZNER_INVOICE_DB_HOST:
+      HETZNER_INVOICE_DB_PORT:
+      HETZNER_INVOICE_DB_SCHEMA:
+
+
+  db:
+    container_name: hetzner-invoice-db
+    image: percona:5.7
+    volumes:
+      - hetzner-invoice-dev:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: hetzner-invoice
+      MYSQL_USER: hetzner-invoice
+      MYSQL_PASSWORD: secret
+    ports:
+      - 3306:3306
+volumes:
+    hetzner-invoice-dev:
