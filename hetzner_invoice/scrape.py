@@ -32,5 +32,6 @@ def get_invoice_from_hetzner_account(
     filename = filepath + "/hetzner_invoice_{invoice_number}.csv".format(
         invoice_number=invoice_number
     )
-    open(filename, "wb").write(file.content)
+    with open(filename, "wb") as fp:
+        fp.write(file.content)
     return filename

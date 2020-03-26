@@ -5,8 +5,8 @@ from hetzner_invoice.invoice import load_transform_invoice, save_invoice_to_db
 invoice_data = load_transform_invoice(
     user=os.getenv("HETZNER_INVOICE_ACCOUNT_USER"),
     pw=os.getenv("HETZNER_INVOICE_ACCOUNT_PW"),
-    secret=os.getenv("HETZNER_INVOICE_ACCOUNT_SECRET"),
-    filepath=os.getenv("HETZNER_INVOICE_FILE"),
+    secret=os.getenv("HETZNER_INVOICE_ACCOUNT_2FA_SECRET"),
+    filepath=os.getenv("HETZNER_INVOICE_DIR"),
 )
 
 
