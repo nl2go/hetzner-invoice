@@ -2,9 +2,9 @@ import pandas as pd
 from pandas import DataFrame
 from sqlalchemy import create_engine
 
-from invoice.load import read_invoice_file, read_server_info_file
-from invoice.combine import populate_columns
-from invoice.scrape import get_invoice_from_hetzner_account
+from hetzner_invoice.load import read_invoice_file, read_server_info_file
+from hetzner_invoice.combine import populate_columns
+from hetzner_invoice.scrape import get_invoice_from_hetzner_account
 
 
 def load_transform_invoice(user: str, pw: str, secret: str, filepath: str) -> DataFrame:

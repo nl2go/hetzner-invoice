@@ -1,6 +1,6 @@
 import os
 
-from invoice.invoice import load_transform_invoice, save_invoice_to_db
+from hetzner_invoice.invoice import load_transform_invoice, save_invoice_to_db
 
 invoice_data = load_transform_invoice(
     user=os.getenv("HETZNER_INVOICE_ACCOUNT_USER"),

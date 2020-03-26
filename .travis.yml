@@ -1,5 +1,9 @@
 ---
 language: python
+services: docker
+
+env:
+  - IMAGE_NAME='nl2go/hetzner-invoice'
 
 before_install:
   - pip install poetry
@@ -8,6 +12,11 @@ install:
   - poetry install
 
 script:
-  - python -m pytest --cov=invoice tests/
-  - black --check  invoice/ tests/
+  - python -m pytest --cov=hetzner_invoice tests/
+  - black --check  hetzner_invoice/ tests/
   - flake8 cmdbox
+
+after_success:
+  - docker build . -t "$IMAGE_NAME:$TRAVIS_BRANCH" -t "$IMAGE_NAME:latest"
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push "$IMAGE_NAME:$TRAVIS_BRANCH" && docker push "$IMAGE_NAME:latest"

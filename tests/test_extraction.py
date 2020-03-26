@@ -3,8 +3,8 @@ import json
 import pandas as pd
 import pytest
 
-from invoice.invoice import populate_columns
-from invoice.load import read_invoice_file, read_server_info_file
+from hetzner_invoice.invoice import populate_columns
+from hetzner_invoice.load import read_invoice_file, read_server_info_file
 
 COLNAMES = [
     "type",

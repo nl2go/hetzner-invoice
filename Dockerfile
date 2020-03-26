@@ -1,12 +1,11 @@
-FROM python:3.8-alpine3.10 as builder
+FROM python:3.8-buster
 RUN pip install --upgrade pip
-RUN apk add --no-cache gfortran g++
+RUN apt-get update && apt-get install -y \
+    gfortran \
+    g++ \
+  && rm -rf /var/lib/apt/lists/*
 RUN pip install poetry==0.12.*
 COPY . /app
 WORKDIR /app
-RUN poetry install
-
-FROM python:3.8-alpine3.10
-COPY --from=builder /app /app
-WORKDIR /app
-CMD ["./invoice/etl.py"]
+RUN poetry config settings.virtualenvs.create false && poetry install
+CMD /bin/bash hetzner_invoice
