@@ -15,7 +15,7 @@ services:
       HETZNER_INVOICE_DIR: /app/invoices
       HETZNER_INVOICE_DB_USER: hetzner-invoice
       HETZNER_INVOICE_DB_PW: secret
-      HETZNER_INVOICE_DB_HOST: app
+      HETZNER_INVOICE_DB_HOST: db
       HETZNER_INVOICE_DB_PORT: 3306
       HETZNER_INVOICE_DB_SCHEMA: hetzner-invoice
 
