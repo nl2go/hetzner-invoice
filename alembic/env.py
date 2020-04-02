@@ -1,9 +1,18 @@
+import os
 from logging.config import fileConfig
 
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
 from alembic import context
+
+USER = (os.getenv("HETZNER_INVOICE_DB_USER"),)
+PW = (os.getenv("HETZNER_INVOICE_DB_PW"),)
+HOST = (os.getenv("HETZNER_INVOICE_DB_HOST"),)
+PORT = (os.getenv("HETZNER_INVOICE_DB_PORT"),)
+SCHEMA = os.getenv("HETZNER_INVOICE_DB_SCHEMA")
+
+SQLALCHEMY_URL = "mysql+pymysql://{}:{}@{}:{}/{}".format(USER, PW, HOST, PORT, SCHEMA)
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
@@ -37,7 +46,7 @@ def run_migrations_offline():
     script output.
 
     """
-    url = config.get_main_option("sqlalchemy.url")
+    url = config.get_main_option("sqlalchemy.url", SQLALCHEMY_URL)
     context.configure(
         url=url,
         target_metadata=target_metadata,
