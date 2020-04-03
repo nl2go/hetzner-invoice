@@ -19,7 +19,7 @@ depends_on = None
 
 def upgrade():
     op.create_table(
-        "invoice",
+        "invoices",
         sa.Column("type", sa.Text),
         sa.Column("description", sa.Text),
         sa.Column("start_date", sa.Text),
