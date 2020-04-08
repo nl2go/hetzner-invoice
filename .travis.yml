@@ -16,6 +16,9 @@ script:
   - black --check  hetzner_invoice/ tests/
   - flake8 cmdbox
 
+after-script:
+  - codecov
+
 after_success:
   - docker build . -t "$IMAGE_NAME:$TRAVIS_BRANCH" -t "$IMAGE_NAME:latest"
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
