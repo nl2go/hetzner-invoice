@@ -18,6 +18,23 @@ SQLALCHEMY_URL = "mysql+pymysql://{}:{}@{}:{}/{}".format(USER, PW, HOST, PORT, S
 # access to the values within the .ini file in use.
 config = context.config
 
+section = config.config_ini_section
+config.set_section_option(
+    section, "HETZNER_INVOICE_DB_USER", os.environ.get("HETZNER_INVOICE_DB_USER")
+)
+config.set_section_option(
+    section, "HETZNER_INVOICE_DB_PW", os.environ.get("HETZNER_INVOICE_DB_PW")
+)
+config.set_section_option(
+    section, "HETZNER_INVOICE_DB_HOST", os.environ.get("HETZNER_INVOICE_DB_HOST")
+)
+config.set_section_option(
+    section, "HETZNER_INVOICE_DB_PORT", os.environ.get("HETZNER_INVOICE_DB_PORT")
+)
+config.set_section_option(
+    section, "HETZNER_INVOICE_DB_SCHEMA", os.environ.get("HETZNER_INVOICE_DB_SCHEMA")
+)
+
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
 fileConfig(config.config_file_name)
@@ -46,7 +63,7 @@ def run_migrations_offline():
     script output.
 
     """
-    url = config.get_main_option("sqlalchemy.url", SQLALCHEMY_URL)
+    url = SQLALCHEMY_URL
     context.configure(
         url=url,
         target_metadata=target_metadata,
