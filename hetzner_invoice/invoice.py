@@ -1,3 +1,5 @@
+import logging
+
 import pandas as pd
 from pandas import DataFrame
 from sqlalchemy import create_engine
@@ -20,6 +22,9 @@ def load_transform_invoice(user: str, pw: str, secret: str, filepath: str) -> Da
     data = read_invoice_file(invoice_filepath)
     server_data = read_server_info_file("server_types.json")
     result_df = populate_columns(data, server_data)
+    logging.info(
+        f"Created DataFrame from invoice and server data. Result has {result_df.shape[0]} rows and {result_df.shape[1]} columns."
+    )
     return result_df
 
 
@@ -38,5 +43,6 @@ def save_invoice_to_db(
     db_url = "mysql+pymysql://{user}:{pw}@{host}:{port}/{schema}".format(
         user=user, pw=pw, host=host, port=port, schema=schema
     )
+    logging.info(f"Connecting to {db_url}")
     engine = create_engine(db_url, echo=False)
     data.to_sql(name="invoices", con=engine, if_exists="append", index=False)

@@ -1,6 +1,9 @@
+import logging
 import os
 
 from hetzner_invoice.invoice import load_transform_invoice, save_invoice_to_db
+
+logging.basicConfig(format="%(asctime)s - %(message)s", level=logging.INFO)
 
 invoice_data = load_transform_invoice(
     user=os.getenv("HETZNER_INVOICE_ACCOUNT_USER"),
