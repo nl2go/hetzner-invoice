@@ -1,4 +1,5 @@
 import logging
+from typing import Tuple, Any
 
 import pyotp
 import requests
@@ -12,7 +13,7 @@ INVOICE_DOWNLOAD_URL = "https://accounts.hetzner.com/invoice/{invoice_number}/cs
 
 def get_invoice_from_hetzner_account(
     username: str, password: str, secret: str, filepath: str
-) -> str:
+) -> Tuple[str, Any]:
     s = requests.session()
     client = s.get(LOGIN_URL)
     soup = BeautifulSoup(client.content, features="html5lib")
@@ -45,4 +46,4 @@ def get_invoice_from_hetzner_account(
     )
     with open(filename, "wb") as fp:
         fp.write(file.content)
-    return filename
+    return filename, invoice_number

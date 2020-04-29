@@ -18,12 +18,14 @@ def load_transform_invoice(user: str, pw: str, secret: str, filepath: str) -> Da
     :param filepath: Path where invoice data will be saved
     :return: DataFrame augmented with additional information
     """
-    invoice_filepath = get_invoice_from_hetzner_account(user, pw, secret, filepath)
+    invoice_filepath, invoice_nr = get_invoice_from_hetzner_account(
+        user, pw, secret, filepath
+    )
     data = read_invoice_file(invoice_filepath)
     server_data = read_server_info_file("server_types.json")
-    result_df = populate_columns(data, server_data)
+    result_df = populate_columns(data, server_data, invoice_nr)
     logging.info(
-        f"Created DataFrame from invoice and server data. Result has {result_df.shape[0]} rows and {result_df.shape[1]} columns."
+        f"Created DataFrame from invoice and server data. Result has {result_df.shape[0]} rows and {result_df.shape[1]} columns. "
     )
     return result_df
 

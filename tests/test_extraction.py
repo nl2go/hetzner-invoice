@@ -49,6 +49,10 @@ def test_read_server_info_data(server_info_data):
 
 def test_populate_columns(invoice_data, server_info_data, invoice_complete):
     res_df = populate_columns(
-        invoice_df=invoice_data, server_types_data=server_info_data
+        invoice_df=invoice_data,
+        server_types_data=server_info_data,
+        invoice_nr="R00111222333",
     )
+    res_df = res_df.loc[:, res_df.columns != "last_updated"]
+    invoice_complete["invoice_nr"] = "R00111222333"
     assert res_df.sort_index(axis=1).equals(invoice_complete.sort_index(axis=1))
