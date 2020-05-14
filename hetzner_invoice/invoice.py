@@ -95,7 +95,9 @@ def save_invoice_to_db(
                 search_duplicate,
                 (record_type, record_description, record_id, record_invoice_nr),
             )
-            if len(cursor) == 1:
+            result = cursor.fetchone()
+            row_count = result[0]
+            if row_count == 1:
                 logging.info(
                     f"This record already exists in the database: {record_type}, {record_description}, {record_id}, "
                     f"{record_invoice_nr}, updating it "
