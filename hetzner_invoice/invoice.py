@@ -96,8 +96,7 @@ def save_invoice_to_db(
                 (record_type, record_description, record_id, record_invoice_nr),
             )
             result = cursor.fetchone()
-            row_count = result[0]
-            if row_count == 1:
+            if result:
                 logging.info(
                     f"This record already exists in the database: {record_type}, {record_description}, {record_id}, "
                     f"{record_invoice_nr}, updating it "
@@ -116,7 +115,6 @@ def save_invoice_to_db(
                         record_invoice_nr,
                     ),
                 )
-
             else:
                 logging.info(f"No records found. Inserting new record")
                 cursor.execute(insert_record, data[i])
