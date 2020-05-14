@@ -16,10 +16,11 @@ invoice_data = load_transform_invoice(
     filepath=os.getenv("HETZNER_INVOICE_DIR"),
 )
 
-invoice_data = transform_invoice_df(invoice_data)
+invoice_data, columns = transform_invoice_df(invoice_data)
 
 save_invoice_to_db(
     data=invoice_data,
+    columns=columns,
     user=os.getenv("HETZNER_INVOICE_DB_USER"),
     pw=os.getenv("HETZNER_INVOICE_DB_PW"),
     host=os.getenv("HETZNER_INVOICE_DB_HOST"),
