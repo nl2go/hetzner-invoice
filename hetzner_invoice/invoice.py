@@ -57,6 +57,9 @@ def save_invoice_to_db(
         cnx = mysql.connector.connect(
             user=user, password=pw, host=host, port=port, database=schema
         )
+        mysql.connector.conversion.MySQLConverter._timestamp_to_mysql = (
+            mysql.connector.conversion.MySQLConverter._datetime_to_mysql
+        )
     except mysql.connector.Error as err:
         logging.error(f"Error when trying to connect to database: {err}")
     else:
