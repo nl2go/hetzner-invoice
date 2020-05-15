@@ -7,6 +7,7 @@ from pandas import DataFrame
 from hetzner_invoice.combine import populate_columns
 from hetzner_invoice.load import read_invoice_file, read_server_info_file
 from hetzner_invoice.scrape import get_invoice_from_hetzner_account
+from hetzner_invoice.sql_query import search_duplicate, update_record, insert_record
 
 
 def load_transform_invoice(user: str, pw: str, secret: str, filepath: str) -> DataFrame:
@@ -57,27 +58,13 @@ def save_invoice_to_db(
         cnx = mysql.connector.connect(
             user=user, password=pw, host=host, port=port, database=schema
         )
-        mysql.connector.conversion.MySQLConverter._timestamp_to_mysql = (
-            mysql.connector.conversion.MySQLConverter._datetime_to_mysql
-        )
+        logging.info("Connection to database established")
     except mysql.connector.Error as err:
         logging.error(f"Error when trying to connect to database: {err}")
     else:
         cursor = cnx.cursor()
-        search_duplicate = (
-            "SELECT * FROM invoices WHERE type = %s AND description = %s AND id "
-            "= %s AND invoice_nr = %s "
-        )
-        update_record = (
-            "UPDATE invoices SET start_date = %s, end_date = %s, quantity = %s, price= %s, last_updated "
-            "= %s WHERE type = %s AND description = %s AND id "
-            "= %s AND invoice_nr = % "
-        )
-        insert_record = (
-            "INSERT INTO invoices "
-            "(type, description, start_date, end_date, quantity, unit_price, price, cores, memory, disk, "
-            "price_monthly, role, id, environment, invoice_nr, last_updated) "
-            "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        mysql.connector.conversion.MySQLConverter._timestamp_to_mysql = (
+            mysql.connector.conversion.MySQLConverter._datetime_to_mysql
         )
 
         for i in range(0, len(data)):
