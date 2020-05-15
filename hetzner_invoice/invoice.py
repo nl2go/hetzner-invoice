@@ -1,4 +1,5 @@
 import logging
+from datetime import datetime
 from typing import List, Tuple
 
 import mysql.connector
@@ -91,6 +92,7 @@ def save_invoice_to_db(
                     f"This record already exists in the database: {record_type}, {record_description}, {record_id}, "
                     f"{record_invoice_nr}, updating it "
                 )
+                last_updated = datetime.utcnow()
                 cursor.execute(
                     update_record,
                     (
@@ -106,7 +108,7 @@ def save_invoice_to_db(
                     ),
                 )
             else:
-                logging.info(f"No records found. Inserting new record")
+                logging.info(f"No duplicate records found. Inserting new record")
                 cursor.execute(insert_record, data[i])
 
         cnx.commit()

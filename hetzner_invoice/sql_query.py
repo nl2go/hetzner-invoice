@@ -5,7 +5,7 @@ search_duplicate = (
 update_record = (
     "UPDATE invoices SET start_date = %s, end_date = %s, quantity = %s, price= %s, last_updated "
     "= %s WHERE type = %s AND description = %s AND id "
-    "= %s AND invoice_nr = % "
+    "= %s AND invoice_nr = %s "
 )
 insert_record = (
     "INSERT INTO invoices "

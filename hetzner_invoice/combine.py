@@ -100,4 +100,5 @@ def populate_columns(
 
     invoice_df["invoice_nr"] = invoice_nr
     invoice_df["last_updated"] = datetime.utcnow()
+    invoice_df = invoice_df.where(pd.notnull(invoice_df), None)
     return invoice_df
